@@ -11,11 +11,10 @@ import java.util.Map;
  *
  */
 public class EventBus implements IEventBus{
-	
-	private Map<String, IEventListener[]> listenersMap = new HashMap<String, IEventListener[]>();
-    private Map<String, IEvent[]> eventsMap = new HashMap<String, IEvent[]>();
-    private int initialListenersSize;
-    private int initialEventArraySize;
+	Map<String, IEventListener[]> listenersMap = new HashMap<String, IEventListener[]>();
+    Map<String, IEvent[]> eventsMap = new HashMap<String, IEvent[]>();
+    int initialListenersSize;
+    int initialEventArraySize;
 
     public EventBus(int initialListenersSize, int initialEventArraySize){
     	this.initialEventArraySize = initialEventArraySize;
